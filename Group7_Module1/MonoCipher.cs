@@ -40,7 +40,7 @@ namespace Group7_Module1
             MessageBox.Show(
                 "1. Encrypt:\n" +
                 "- Enter the text into \"Plain text\" that needs to be encrypted\r\n- Click \"Generate key\" to create the key\r\n- Click \"Encrypt\" to encrypt \"Plain text\" into \"Cipher text\"\n" +
-                "2. Decrypt\n" +
+                "2. Decrypt:\n" +
                 "- Enter the text \"Cipher text\" from the \"Encrypt\" group into the \"Decrypt\" group\r\n- Copy key from \"Encrypt\" group to \"Decrypt\" group\r\n- Click \"Decrypt\" to decrypt \"Cipher text\" into \"Plain text\"", 
                 "Instruction Manual", 
                 MessageBoxButtons.OK, 

@@ -11,6 +11,7 @@ namespace Group7_Module1.Models
         public static string GenerateRandomKey()
         {
             char[] alphabet = new char[26];
+
             for (int i = 0; i < 26; i++)
             {
                 alphabet[i] = (char)('a' + i);
@@ -18,13 +19,16 @@ namespace Group7_Module1.Models
 
             Random rng = new Random();
             int n = alphabet.Length;
+
             while (n > 1)
             {
                 n--;
                 int k = rng.Next(n + 1);
+
                 var temp = alphabet[k];
                 alphabet[k] = alphabet[n];
                 alphabet[n] = temp;
+                
             }
 
             return new string(alphabet);
@@ -33,6 +37,7 @@ namespace Group7_Module1.Models
         public static string Encrypt(string plainText, string key)
         {
             char[] chars = new char[plainText.Length];
+
             for (int i = 0; i < plainText.Length; i++)
             {
                 if (plainText[i] == ' ')
@@ -52,6 +57,7 @@ namespace Group7_Module1.Models
         public static string Decrypt(string cipherText, string key)
         {
             char[] chars = new char[cipherText.Length];
+
             for (int i = 0; i < cipherText.Length; i++)
             {
                 if (cipherText[i] == ' ')
@@ -64,6 +70,7 @@ namespace Group7_Module1.Models
                     chars[i] = (char)j;
                 }
             }
+
             return new string(chars);
         }
     }
